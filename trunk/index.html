@@ -8,7 +8,7 @@
             if ('serviceWorker' in navigator) {
 				console.log('navigator_have');
 			    window.addEventListener('load', function() {
-			        navigator.serviceWorker.register('js/sw.js').
+			        navigator.serviceWorker.register('js/sw.js', {scope: "/"}).
                     then(function(registration) {
                         console.log(registration);
                     }).
