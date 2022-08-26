@@ -8,9 +8,8 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/trunk/index.html",
+  "start_url": "/trunk/",
   "display": "standalone",
   "background_color": "#fff",
-  "theme_color": "#1976d2",
-  "scope": "/trunk"
+  "theme_color": "#1976d2"
 }
