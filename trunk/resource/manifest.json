@@ -1,0 +1,15 @@
+{
+  "name": "大话西游：归来",
+  "short_name": "大话西游：归来",
+  "icons": [
+    {
+      "src": "https://webinput.nie.netease.com/img/xyh5/icon.png/144",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/trunk/index.html",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#1976d2"
+}
