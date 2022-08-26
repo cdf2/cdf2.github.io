@@ -8,7 +8,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/trunk/",
+  "start_url": "/trunk/index.html",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#1976d2"
