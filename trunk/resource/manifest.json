@@ -1,6 +1,6 @@
 {
-  "name": "testpwa",
-  "short_name": "testpwa",
+  "name": "pwatest",
+  "short_name": "pwatest",
   "icons": [
     {
       "src": "https://webinput.nie.netease.com/img/xyh5/icon.png/144",
@@ -11,5 +11,6 @@
   "start_url": "/trunk/index.html",
   "display": "standalone",
   "background_color": "#fff",
-  "theme_color": "#1976d2"
+  "theme_color": "#1976d2",
+  "scope": "/trunk"
 }
