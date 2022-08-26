@@ -11,5 +11,6 @@
   "start_url": "/trunk/index.html",
   "display": "standalone",
   "background_color": "#fff",
-  "theme_color": "#1976d2"
+  "theme_color": "#1976d2",
+  "scope": "/trunk"
 }
