@@ -17,6 +17,36 @@
                     })
 			    })
 			}
+            let button = document.getElementById('qjfs-btn');
+			let savedPrompt = null;
+			let canInstall = false;
+			window.addEventListener('beforeinstallprompt', function(e) {
+			    e.preventDefault(); //阻止默认弹安装
+			    savedPrompt = e;
+			    canInstall = true;
+			    button.classList.remove('disabled')
+				$('.c-app-install-popup').show();
+				$('.button-add, .button-cancel').click(function(event) {
+					$('.c-app-install-popup').hide();
+				});
+			})
+
+			button.addEventListener('click', function() {
+			    if (!canInstall) {
+			        return;
+			    }
+			    if (!savedPrompt) {
+			        return;
+			    }
+			    button.classList.add('disabled');
+			    savedPrompt.prompt()
+			    savedPrompt.userChoice.then(function(result) {
+			        if (result.outcome === 'accept') {
+			            savedPrompt = null
+			            console.log("添加成功");
+			        }
+			    })
+			})
         </script>
         <!-- <script src="/js/sw.js"></script> -->
     </head>
@@ -30,7 +60,7 @@
             -ms-transform: translateX(-50%);
             transform: translateX(-50%);
             width: 300px;
-            height: 150px;
+            height: 200px;
             border-radius: 8px;
             background: #fff;
             box-shadow: 0 0 transparent, 0 0 transparent, 0 10px 15px -3px rgba(0, 0, 0, .2), 0 4px 6px -2px rgba(0, 0, 0, .3);
