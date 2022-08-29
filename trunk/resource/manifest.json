@@ -3,8 +3,8 @@
   "short_name": "pwatest",
   "icons": [
     {
-      "src": "stop2.ico",
-      "sizes": "32x32"
+      "src": "stop2.png",
+      "sizes": "144x144"
     }
   ],
   "start_url": "/trunk/index.html",
