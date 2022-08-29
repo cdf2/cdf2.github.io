@@ -3,7 +3,7 @@
   "short_name": "pwatest",
   "icons": [
     {
-      "src": "stop.ico",
+      "src": "stop2.ico",
       "sizes": "32x32"
     }
   ],
