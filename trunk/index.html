@@ -18,16 +18,21 @@
 			    })
 			}
             let button = document.getElementById('qjfs-btn');
+            let cpop = document.getElementById('inspop');
+            let cancelButton = document.getElementById('qjfs-cancel');
 			let savedPrompt = null;
 			let canInstall = false;
 			window.addEventListener('beforeinstallprompt', function(e) {
 			    e.preventDefault(); //阻止默认弹安装
 			    savedPrompt = e;
 			    canInstall = true;
-			    button.classList.remove('disabled')
-				$('.c-app-install-popup').show();
-				$('.button-add, .button-cancel').click(function(event) {
-					$('.c-app-install-popup').hide();
+			    button.classList.remove('disabled');
+				cpop.style.display = "inline";//显示
+				button.addEventListener('click', function(event) {
+					cpop.style.display = "none"//隐藏
+				});
+                cancelButton.addEventListener('click', function(event) {
+					cpop.style.display = "none"//隐藏
 				});
 			})
 
@@ -111,7 +116,7 @@
             <p class="tip">放在桌面你喜欢的位置，可以快速访问应用</p>
             <div class="buttons">
                 <button type="button" class="button-add" id="qjfs-btn">添加</button>
-                <button type="button" class="button-cancel">取消</button>
+                <button type="button" class="button-cancel" id="qjfs-cancel">取消</button>
             </div>
         </div>
         <h1>hello pwa</h1>
